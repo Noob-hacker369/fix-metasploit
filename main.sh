@@ -81,6 +81,7 @@ center "*** Installation..."
 # sed '/rbnacl/d' -i metasploit-framework.gemspec
 
 #sed -i "277,\$ s/2.8.0/2.2.0/" Gemfile.lock
+cd ../usr/opt/*
 
 gem install bundler
 declare NOKOGIRI_VERSION=$(cat Gemfile.lock | grep -i nokogiri | sed 's/nokogiri [\(\)]/(/g' | cut -d ' ' -f 5 | grep -oP "(.).[[:digit:]][\w+]?[.].")
